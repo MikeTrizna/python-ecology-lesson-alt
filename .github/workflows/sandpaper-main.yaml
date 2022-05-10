@@ -39,15 +39,20 @@ jobs:
           environment-file: environment.yml
 
       - name: "Set RETICULATE_PYTHON env var"
-        shell: bash -l {0}
         run: |
           echo "RETICULATE_PYTHON=$(which python)" >> $GITHUB_ENV
+        shell: bash -l {0}
 
       - name: "Set up R"
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
           install-r: false
+
+      - name: "Install reticulate"
+        run: |
+          install.packages("reticulate")
+        shell: Rscript {0}
 
       - name: "Set up Pandoc"
         uses: r-lib/actions/setup-pandoc@v2
