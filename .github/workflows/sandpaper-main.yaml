@@ -49,11 +49,6 @@ jobs:
           use-public-rspm: true
           install-r: false
 
-      - name: "Install reticulate"
-        run: |
-          install.packages("reticulate")
-        shell: Rscript {0}
-
       - name: "Set up Pandoc"
         uses: r-lib/actions/setup-pandoc@v2
         with:
