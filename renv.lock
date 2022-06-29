@@ -99,7 +99,7 @@
       "Package": "reticulate",
       "Version": "1.24",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Hash": "ffdf27627a3c1537478073c43b6e7980",
       "Requirements": [
         "Matrix",
